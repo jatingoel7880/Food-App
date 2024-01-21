@@ -92,6 +92,95 @@ const resList= [
       }
     },
     {
+          data: {
+            id: "364897",
+            name: "Jahnvi Veg Food Corner",
+            cloudinaryImageId: "tswneb5a2qkisuwtahqv",
+            locality: "Naka Hindola",
+            areaName: "Rajendra Nagar",
+             costForTwo: "₹200 for two",
+             deliveryTime: 20,
+            cuisines: [
+              "Fast Food",
+              "Snacks",
+              "Indian"
+            ],
+            avgRating: 3.9,
+            "parentId": "375067",
+            "avgRatingString": "4.4",
+            "totalRatingsString": "5K+",
+             sla: {
+              "deliveryTime": 20,
+              "lastMileTravel": 7.2,
+              "serviceability": "SERVICEABLE",
+              "slaString": "36 mins",
+              "lastMileTravelString": "7.2 km",
+              "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+              "nextCloseTime": "2024-01-20 04:30:00",
+              "opened": true
+            },
+            "badges": {
+              
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+              "entityBadges": {
+                "imageBased": {
+                  
+                },
+                "textBased": {
+                  
+                },
+                "textExtendedBadges": {
+                  
+                }
+              }
+            },
+            "aggregatedDiscountInfoV3": {
+              "header": "₹125 OFF",
+              "subHeader": "ABOVE ₹249",
+              "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+              "logoCtx": {
+                "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+              },
+              "freedelMessage": "FREE DELIVERY",
+              "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+              "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+              "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {
+                  
+                },
+                "video": {
+                  
+                }
+              }
+            },
+            "reviewsSummary": {
+              
+            },
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {
+              
+            }
+          },
+          "analytics": {
+            
+          },
+          "cta": {
+            "link": "https://www.swiggy.com/restaurants/burger-singh-big-punjabi-burgers-nagar-nigam-aashiana-lucknow-364762",
+            "type": "WEBLINK"
+          }
+        },
+    
+    {
       data: {
         id: "89361",
         name: "La Pino'z Pizza",
@@ -196,7 +285,7 @@ const resList= [
             "Snacks",
             "Fast Food"
           ],
-          avgRating: 4.2,
+          avgRating: 3.8,
           parentId: "547",
           avgRatingString: "4.2",
           totalRatingsString: "5K+",
@@ -796,7 +885,7 @@ const resList= [
           "Desserts",
           "Beverages"
         ],
-        avgRating: 4.3,
+        avgRating: 3.9,
         "parentId": "7918",
         "avgRatingString": "4.3",
         "totalRatingsString": "1K+",
@@ -884,7 +973,7 @@ const resList= [
           "Desserts",
           "Beverages"
         ],
-        avgRating: 4.3,
+        avgRating: 4.0,
         "parentId": "4444",
         "avgRatingString": "4.3",
         "totalRatingsString": "1K+",
@@ -1143,7 +1232,7 @@ const resList= [
         cuisines: [
           "Mughlai"
         ],
-        avgRating: 4.3,
+        avgRating: 3.8,
         "parentId": "140984",
         "avgRatingString": "4.3",
         "totalRatingsString": "10K+",

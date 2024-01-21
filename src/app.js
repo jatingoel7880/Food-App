@@ -11,7 +11,7 @@ import Body from "./components/Body";
         <Header/>
         <Body/>
         </div>
-    )
+    )  
 }
 
 
