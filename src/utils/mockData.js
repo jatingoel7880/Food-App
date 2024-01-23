@@ -1,7 +1,7 @@
 const resList= [
     {
     type:"resturant",
-      data: {
+      info: {
         id: "364762",
         name: "Burger Singh (Big Punjabi Burgers)",
         cloudinaryImageId: "yqcqjied2ckilso9g758",
@@ -92,7 +92,7 @@ const resList= [
       }
     },
     {
-          data: {
+          info: {
             id: "364897",
             name: "Jahnvi Veg Food Corner",
             cloudinaryImageId: "tswneb5a2qkisuwtahqv",
@@ -181,7 +181,7 @@ const resList= [
         },
     
     {
-      data: {
+      info: {
         id: "89361",
         name: "La Pino'z Pizza",
         cloudinaryImageId: "dek7ifvgfbnddngpqn4r",
@@ -271,7 +271,7 @@ const resList= [
     },
     {
         type:"resturant",
-        data: {
+        info: {
           id: "60429",
           name: "KFC",
           cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
@@ -355,7 +355,7 @@ const resList= [
         }
     },
     {
-      data: {
+      info: {
         id: "231204",
         name: "Burger King",
         cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
@@ -440,7 +440,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "354998",
         name: "Pizza Hut",
         cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
@@ -520,7 +520,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "59654",
         name: "Subway",
         cloudinaryImageId: "63178e3e64d503a479f2a2048a474552",
@@ -604,7 +604,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "229723",
         name: "Faasos - Wraps, Rolls & Shawarma",
         cloudinaryImageId: "af33b81798b11deba338e94b7585d348",
@@ -695,7 +695,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "332266",
         name: "Kwality Walls Frozen Dessert and Ice Cream Shop",
         cloudinaryImageId: "zwesdklnfnulspppjwd0",
@@ -780,7 +780,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "78815",
         name: "Wow! Momo",
         cloudinaryImageId: "5a148e63e9c54942e37627da1aa156be",
@@ -871,7 +871,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "238116",
         name: "The Good Bowl",
         cloudinaryImageId: "6e04be27387483a7c00444f8e8241108",
@@ -960,7 +960,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "238115",
         name: "Sweet Truth - Cake and Desserts",
         cloudinaryImageId: "81cf6bfe2760a45a0caf2e28716ca4d7",
@@ -1048,7 +1048,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "63376",
         name: "Keventers - Milkshakes & Desserts",
         cloudinaryImageId: "89707df532fd993b3d79a1a28038a901",
@@ -1135,7 +1135,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "59534",
         name: "Baskin Robbins - Ice Cream Desserts",
         cloudinaryImageId: "85ccae4e3576f9330af102c46ca85395",
@@ -1222,7 +1222,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "65085",
         name: "Mughal Zaika Aminabad",
         cloudinaryImageId: "yood4aumr1wbxed1odxk",
@@ -1307,7 +1307,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "238114",
         name: "Firangi Bake",
         cloudinaryImageId: "f3rykav9ccwuiohmvqwr",
@@ -1413,7 +1413,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "678572",
         name: "Rominus Pizza And Burger",
         cloudinaryImageId: "df3122a3d49482073a839f47d0ae4281",
@@ -1500,7 +1500,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "238112",
         name: "Behrouz Biryani",
         cloudinaryImageId: "89fccaa76f2f760e2742b9e53d32bb69",
@@ -1604,7 +1604,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "229730",
         name: "LunchBox - Meals and Thalis",
         cloudinaryImageId: "rzpfumdzzpxqawsxckqp",
@@ -1693,7 +1693,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "238113",
         name: "Oven Story Pizza - Standout Toppings",
         cloudinaryImageId: "b39e4312ae2e9f65c3b58faaed83f488",
@@ -1782,7 +1782,7 @@ const resList= [
       }
     },
     {
-      data: {
+      info: {
         id: "333677",
         name: "Wat-A-Burger! - India Ka Burger",
         cloudinaryImageId: "5328fbc604c769293af7ea570d81a90c",
