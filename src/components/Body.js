@@ -1,6 +1,7 @@
 import ResturantCard from "./ResturantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import {Link} from "react-router-dom";
 
 const Body=()=>{
 
@@ -29,9 +30,9 @@ const Body=()=>{
     //this is not a good away to access and handling the data. Know using the optional chaining for that
     // setListOfResturant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     //Optional Chaining:- Syntax:- ?. 
-    setListOfResturant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setListOfResturant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     //when fetching data making a copy of listOfResturant as well as filteredResturant 
-    setFilteredResturant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setFilteredResturant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 } //but will use listOfResturants to filter and update the data but for displaying using filteredResturant
 
 //Conditional Rendering 
@@ -81,7 +82,9 @@ const Body=()=>{
           <p>Sorry, not found</p>) : 
           (
           filtertedResturant.map((restaurant) => (
-            <ResturantCard key={restaurant.info.id} resData={restaurant} />))
+            <Link  key={restaurant.info.id} 
+            to={"/resturants/"+restaurant.info.id}>
+            <ResturantCard resData={restaurant} /></Link>))
         )}
     
          
