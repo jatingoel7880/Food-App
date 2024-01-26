@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const User = (props) => {
+
+  const [count, setCount]=useState(0);
 
   // const User = ({name}) => { //destructing method, passing name in the about file in User Compoenent there and getting as a parameter here
   return (
@@ -9,6 +13,9 @@ const User = (props) => {
       {/* <h2>Name:{name}</h2> */} {/* destructing method  */}
       <h3>Location: Lucknow</h3>
       <h4>Contact: 7880362153</h4>
+
+      <h1>Count:{count}</h1>
+      <button onClick={(e)=>{setCount(count+1)}}>Click here</button>
     </div>
   )
 }
