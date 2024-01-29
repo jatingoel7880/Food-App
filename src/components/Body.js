@@ -1,4 +1,4 @@
-import ResturantCard from "./ResturantCard";
+import ResturantCard, { withVegLabel } from "./ResturantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -12,8 +12,10 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
+  const ResturantCardVeg = withVegLabel(ResturantCard);
+
   //Whenever state variable update, react triggers a reconciliation cycle(re-renders the component )
-  console.log("Body Rendered");
+  console.log("Body Rendered", listOfResturants);
 
   useEffect(() => {
     fetchData();
@@ -88,9 +90,9 @@ const Body = () => {
           </button>
         </div>
 
-        <div className="search m-4 p-4 flex items-center">  
+        <div className="search m-4 p-4 flex items-center">
           <button
-            className="px-4 py-2 bg-gray-100 rounded-lg"
+            className="px-2 py-1 bg-gray-100 rounded-lg"
             onClick={() => {
               const filteredList = listOfResturants.filter(
                 (res) => res.info.avgRating > 4.3
@@ -116,7 +118,12 @@ const Body = () => {
               key={restaurant.info.id}
               to={"/resturants/" + restaurant.info.id}
             >
-              <ResturantCard resData={restaurant} />
+              {/* logic :- if the resturant is veg then add a veg label to it */}
+              {restaurant.info.veg ? (
+                <ResturantCardVeg resData={restaurant} />
+              ) : (
+                <ResturantCard resData={restaurant} />
+              )}
             </Link>
           ))
         )}
