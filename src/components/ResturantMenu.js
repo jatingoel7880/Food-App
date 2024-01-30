@@ -2,11 +2,14 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useResturantMenu from "../utils/useResturantMenu";
 import ResturantCategory from "./ResturantCategory";
+import { useState } from "react";
 
 const ResturantMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useResturantMenu(resId);
+
+  const[showIndex,setShowIndex]=useState(null);
   //created this custom hook and gives us the resInfo and ResturantMenu did not have to worry about how this is fetching the data and
   //don't have this useEffect and fetchMenu logic. Tyring to abstract the fetch data logic and put inside this hook. ResturantMenu does not have to worry about
   //how to fetch the data it is just have to worry about that this is the resInfo and got the resturant data inside it and want to display it. and doesnt have to manage its own state.
@@ -39,10 +42,14 @@ const ResturantMenu = () => {
       </p>
       {/* Accordian and categories of a each resturant */}
       {/* want these Resturant category to map to each categories in a resturant  */}
-      {categories.map((category) => (
+      {categories.map((category,index) => (
         <ResturantCategory
           key={category?.card?.card.title}
-          data={category?.card?.card}
+          data={category?.card?.card}                         
+          // showItems={index==showIndex? true:false}
+          showItems={index==showIndex}
+          // setShowIndex={()=>setShowIndex(index)}
+          setShowIndex={() => setShowIndex((prevIndex) => (prevIndex === index ? null : index))}
         />
       ))}
     </div>

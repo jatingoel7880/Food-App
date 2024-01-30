@@ -1,8 +1,9 @@
 import ResturantCard, { withVegLabel } from "./ResturantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   //const [listOfResturants, setListOfResturant]=useState(resList)
@@ -33,11 +34,11 @@ const Body = () => {
     // setListOfResturant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     //Optional Chaining:- Syntax:- ?.
     setListOfResturant(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     //when fetching data making a copy of listOfResturant as well as filteredResturant
     setFilteredResturant(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }; //but will use listOfResturants to filter and update the data but for displaying using filteredResturant
 
@@ -52,6 +53,9 @@ const Body = () => {
       <h1>Looks You are Offline! Please check your internet connection.</h1>
     );
   }
+
+  const {loggedInUser,setUserName}= useContext(UserContext);
+
 
   return listOfResturants.length === 0 ? (
     <Shimmer />
@@ -105,7 +109,17 @@ const Body = () => {
             Top Rated Resturants
           </button>
         </div>
+
+        {/* it is an example of updating the context data live. Whatever username i enter in the input box should update the context data and reflect it. */}
+        {/* How to update the usename from the input box  :- Can update the userName using the setUserName*/}
+        <div className="search m-4 p-4 flex items-center">
+        <label>User Name:-</label>
+          <input className="border-black p-2" 
+          value={loggedInUser}
+          onChange={(e)=>setUserName(e.target.value)} />
+        </div>
       </div>
+
 
       <div className="flex flex-wrap px-3">
         {/* listOfResturants.map((resturant)=>  rendering with the filteredResturant copy data  */}

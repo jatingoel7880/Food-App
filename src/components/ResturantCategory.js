@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const ResturantCategory = ({ data, showItems }) => {
+const ResturantCategory = ({ data, showItems,setShowIndex,index}) => {
   // const [showItems, setShowItems]=useState(false);
 
   // const handleClick=()=>{
@@ -12,7 +12,11 @@ const ResturantCategory = ({ data, showItems }) => {
   //to give the power to the parent class i.e, ResturantMenu.
   //there are terms as Controlled and Uncontrolled components in react. so know this resturant category is a controlled component.
   //b/c Resturant Menu i.e parent controlling the Resturant Category
-  //When using the state variable then it was a uncontrolled component
+  //When using the state variable then it was a uncontrolled component. Resturant menu does not have a full controll over Resturant Category in uncontrolled component.
+  const handleClick=()=>{
+      setShowIndex();
+    }
+
   return (
     <div>
       {/* Header*/}
@@ -24,7 +28,7 @@ const ResturantCategory = ({ data, showItems }) => {
           <span className="font-bold text-lg">
             {data.title} ({data.itemCards.length})
           </span>
-          <span>⬇️</span>
+          <span>{showItems ? "⬆️": "⬇️" }</span> 
         </div>
         {/* Accordian body */}
         {showItems && <ItemList items={data.itemCards} />}
