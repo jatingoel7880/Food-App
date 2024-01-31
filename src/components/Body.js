@@ -77,7 +77,7 @@ const Body = () => {
           />
 
           <button
-            className="px-2 py-1 bg-green-100 m-4 rounded-lg"
+            className="px-2 py-1 bg-green-100 m-4 rounded-lg border-black"
             onClick={() => {
               const filtertedResturant = listOfResturants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())

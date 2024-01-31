@@ -1,6 +1,20 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 import { CDN_URL } from "../utils/constant";
 
 const ItemList = ({ items }) => {
+  const dispatch = useDispatch();
+
+  const handleAddItem = (item) => {
+    //dispatch an action
+    dispatch(addItem(item));
+    //whatever pass inside the addItem should go inside the cart
+    //whatever passed inside this action will go the reducer function action and that to inside the payload
+    //whenever call/(disptach this action) this addItem() it  will create an object and t will create a
+    //payload inisde that object and it will add whatever data is data to the object. It will this object that it will pass the object
+    //as a second argument  as action in cartSlice.
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -23,7 +37,11 @@ const ItemList = ({ items }) => {
 
           <div className="w-3/12 p-2">
             <div className="absolute">
-              <button className="p-2 mx-7 rounded-lg bg-black text-white shadow-lg">
+              <button
+                className="p-2 mx-7 rounded-lg bg-black text-white shadow-lg"
+                //onClick={handleAddItem}
+                onClick={()=>handleAddItem(item)}
+              >
                 Add +
               </button>
             </div>
