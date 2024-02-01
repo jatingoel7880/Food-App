@@ -23,7 +23,7 @@ const ResturantCard = (props) => {
 };
 //Higher order component
 //which will this resturant card as an input and returns the enhanced version of this component by adding the veg label on it
-//inout - ResturantCard ==> ResturantCardVeg
+//input - ResturantCard ==> ResturantCardVeg
 export const withVegLabel = (ResturantCard) => {
   return (props) => {
     return (

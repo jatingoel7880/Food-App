@@ -21,7 +21,7 @@ const cartSlice = createSlice({
       //dont mutate state in older version
       //Eg:- const newState=[...state];
       //     newState.items.push(action.payload);
-      //     return newState;
+      //     return newState; 
 
       //But using Redux Toolkit we have to mutate the state according to the State. But redux in background is still crating the older version with the help of immer lib.
       //Redux Toolkit uses immer behind 
@@ -33,6 +33,7 @@ const cartSlice = createSlice({
 
     clearCart: (state) => {
       state.itemss.length = 0;
+      // or return {itemss:[]};
     },
   },
 });

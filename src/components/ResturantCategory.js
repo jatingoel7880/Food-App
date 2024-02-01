@@ -8,7 +8,7 @@ const ResturantCategory = ({ data, showItems,setShowIndex,index}) => {
   //   setShowItems(!showItems);
   // }
   //Not will be using the state to show the list of the menu. b/c it gives the control and state
-  //to each of the category in the list. For doing expanding and closing the rest of the accoridan list have
+  //to each of the category in the list. For doing expanding and closing the rest of the accordian list have
   //to give the power to the parent class i.e, ResturantMenu.
   //there are terms as Controlled and Uncontrolled components in react. so know this resturant category is a controlled component.
   //b/c Resturant Menu i.e parent controlling the Resturant Category
